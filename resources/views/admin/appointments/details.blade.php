@@ -13,10 +13,10 @@
 
                 <div class="item-card flex flex-row justify-between items-center">
                     <div class="flex flex-row items-center gap-x-3">
-                        <img src=" " alt="" class="rounded-2xl object-cover w-[120px] h-[90px]">
+                        <img src="{{ Storage::url($appointment->product->thumbnail) }}" alt="" class="rounded-2xl object-cover w-[120px] h-[90px]">
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Product Interest</p>
-                            <h3 class="text-indigo-950 text-xl font-bold">asdasdadad</h3>
+                            <h3 class="text-indigo-950 text-xl font-bold">{{$appointment->product->name}}</h3>
                         </div>
                     </div>  
                 </div>
@@ -28,21 +28,21 @@
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Name</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                asdsadad
+                                {{ $appointment->name }}
                             </h3>
                         </div>
         
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Email</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                asdasdsadsadsd
+                                {{ $appointment->email }}
                             </h3>
                         </div>
         
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Phone</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                +12312334534
+                                {{ $appointment->phone_number }}
                             </h3>
                         </div>
                     </div>
@@ -50,21 +50,21 @@
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Brief</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                asdasd qweqwewqe
+                                {{ $appointment->brief }}
                             </h3>
                         </div>
         
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Budget</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                Rp 0
+                                Rp {{ $appointment->budget }}
                             </h3>
                         </div>
         
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Meeting Date At</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                asdsadasdasds
+                                {{ $appointment->meeting_at }}
                             </h3>
                         </div>
 
